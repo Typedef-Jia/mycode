@@ -42,7 +42,7 @@ git push -u origin main --force
 ### 清除 DNS 缓存 ipconfig /flushdns
 
 ### 取消代理
-```git
+```bash
 git config --global --unset http.proxy 
 git config --global --unset https.proxy
 ```

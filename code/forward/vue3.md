@@ -1,9 +1,9 @@
-# Vue3代码片段
+# vue代码片段
 
 <ArticleMetadata />
 
-## 创建vue3项目命令
-```vue3
+## 创建vue项目命令
+```vue
 npm create vue@latest
 ```
 ## 组件通信
@@ -25,7 +25,7 @@ import { ref } from 'vue'
 let car = ref('宝马')
 ```
 >子组件获取父亲的数据
-```vue3
+```vue
 <template>
   <div>
     <h3>儿子</h3>
@@ -45,11 +45,11 @@ import { ref } from 'vue'
 ```
  第二种方法，mitt
 先安装mitt
-```vue3
+```vue
 npm i mitt
 ```
 安装后导入,然后默认导出
-```vue3
+```vue
 import mitt from "mitt";
 
 const mymitt = mitt()
@@ -58,7 +58,7 @@ export default mymitt
 ```
 使用方法<br/>
 **要获取数据的组件这样写↓**
-```vue3
+```vue
 <template>
   <div>
   </div>
@@ -108,7 +108,7 @@ function mittcar() {
 :::
 
 ## 自定义全局指令
-```vue3
+```vue
 app.directive('chanage', {
   mounted(el) {
     el.innerText = '哈哈哈'

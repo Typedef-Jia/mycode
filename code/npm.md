@@ -7,7 +7,7 @@
 
 2、初始化你的npm包
 在本地创建一个文件夹来承载你的npm包。打开命令行终端，并通过cd命令进入到该文件夹。然后运行以下命令初始化你的npm包：
-```npm 
+```bash 
 npm init
 ```
 
@@ -73,12 +73,12 @@ npm login
    ![hh](https://pic.imgdb.cn/item/668408b6d9c307b7e95abff7.png "图片")
 
 2. 在项目根目录下运行以下命令初始化 package.json：
-   ```npm     
+   ```bash  
    npm init -y
    ```
 3. 安装 TypeScript 和其他依赖
   在项目根目录下运行以下命令：
-   ```npm 
+   ```bash 
    npm install typescript --save-dev
    ```
 4. 配置 tsconfig.json
@@ -104,7 +104,7 @@ npm login
  在 src 目录下创建 index.ts 
  >如果没有src请创建
  这是一个九九乘法表的示例
- ```ts
+ ```js
  export function generateMultiplicationTable(): string {
   let table = '';
   for (let i = 1; i <= 9; i++) {
@@ -119,13 +119,13 @@ npm login
  ```
  6. 编译 TypeScript 代码<br>
    在项目根目录下运行以下命令进行编译：
- ```npm
+ ```bash
    npx tsc
 ```
 >运行npx tsc后 项目中会多一个dist文件夹 并且目录下生成了 index.js 和 index.d.ts 文件。
 7. 发布到 npm<br>
    在项目根目录下运行以下命令发布包：
-   ```npm 
+   ```bash
    npm publish --access public
    ```
 这样别人就可以用npm命令来安装你的包，并且使用了。

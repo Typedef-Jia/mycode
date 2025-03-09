@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+
   base: "/",
   appearance: 'dark',
   title: "main中世界",
@@ -10,6 +11,7 @@ export default defineConfig({
   lang: 'zh-CN',
   //侧边栏文字更改(移动端)
   sidebarMenuLabel: '目录',
+
 
   // 地址栏icon
   head: [["link", { rel: "icon", href: "/icon.png" }]],
