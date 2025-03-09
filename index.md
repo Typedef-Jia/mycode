@@ -15,7 +15,7 @@ hero:
   actions:
     - theme: brand
       text: 前往仓库
-      link: /code/Preface.md
+      link: /code/forward/Sass.md
     
     - theme: alt
       text: 网站导航
