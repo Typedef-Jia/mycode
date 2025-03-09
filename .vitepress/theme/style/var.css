@@ -1,0 +1,71 @@
+/* var.css */
+/* :root {
+  --vp-c-brand-1: #22149b;
+  --vp-c-brand-2: #5d15c9;
+  --vp-c-brand-3: #5c10d5;
+}
+
+.dark {
+  --vp-c-brand-1: #321ee0;
+  --vp-c-brand-2: #2b09c4;
+  --vp-c-brand-3: #4313f0;
+} */
+ .vp-doc a {
+   text-decoration: none;
+ }
+
+/* 以前的vp-c-brand已弃用 */
+/* 引用块 */
+.vp-doc blockquote {
+  border-radius: 5px;
+  padding: 10px 16px;
+  background-color: rgba(93, 83, 204, 0.173);
+  position: relative;
+  border-left: 4px solid rgb(88, 75, 228);
+}
+/* .vitepress\theme\style\var.css */
+/* 提示框背景颜色 */
+:root {
+  --c-yellow-2: #3f55e2;
+  --c-green-1: #f2724f;
+  --vp-custom-block-tip-bg: var(--vp-c-green-soft);
+  --vp-home-hero-image-background-image: var(--vp-home-hero-image-background-image);
+  --vp-home-hero-image-background-image:linear-gradient(15deg, var(--c-yellow-2) 65%, var(--c-green-1) 30%);
+
+  --vp-home-hero-image-filter: blur(50px);
+}
+/* h1{
+  background: -webkit-linear-gradient(10deg, #bd34fe 5%, #e43498 15%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+/* 提示框 */
+.custom-block.tip {
+  border-color: var(--vp-c-green-2);
+}
+
+/* 警告框 */
+.custom-block.warning {
+  /* border-color: #d97706; */
+  border-color: var(--vp-c-yellow-2);
+}
+
+/* 危险框 */
+.custom-block.danger {
+  /* border-color: #f43f5e; */
+  border-color: var(--vp-c-red-2);
+}
+
+.medium-zoom-overlay {
+  z-index: 30;
+}
+
+.medium-zoom-image {
+  z-index: 9999 !important;
+  /* 给的值是21，但是实测盖不住，直接999 */
+}
+
+
+

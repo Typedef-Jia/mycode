@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'customFont';
+  src: url('../../../assets/霞鹜文楷.woff2') format('truetype');
+ 
+}
+
+/* :root {
+  --vp-sidebar-width: 300px;
+  --vp-font-family-base: "customFont"
+} */
