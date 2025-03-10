@@ -50,6 +50,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: 'npm包', link: '/code/npm.md' },
+      { text: "WebSocket示例", link: "/code/WebSocket.md" },
       // 二级导航栏
       {
         text: '代码仓库',
@@ -60,8 +61,8 @@ export default defineConfig({
       },
       // 语言切换
       // SVG 图标
-      { text: '网页模板', link: 'https://mywebsite.ljjk.love/' },
-      { text: '博客', link: 'https://www.ljjk.love/' },
+      { text: '毕设商店', link: 'https://easybs.top/' },
+      { text: '博客', link: 'https://blg.easybs.top/' },
       { text: "关于", link: "/Life/Selfinfo" }
     ],
 
@@ -76,6 +77,7 @@ export default defineConfig({
           { text: 'css', link: '/code/forward/css.md' },
           { text: 'Sass', link: '/code/forward/Sass.md' },
           { text: 'jacaScript', link: '/code/forward/javascript.md' },
+          { text: "WebSocket示例", link: "/code/WebSocket.md" },
           { text: 'typeScrpit', link: '/code/forward/typeScrpit.md' },
           { text: 'vue2', link: "/code/forward/vue2.md" },
           { text: 'vue3', link: '/code/forward/vue3.md' },
