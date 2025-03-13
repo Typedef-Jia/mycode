@@ -1,22 +1,31 @@
 # WebSocket代码示例
 ## 前端代码
 > WebsocketTool.js
-``` JavaScript
-//在JavaScript中实现WebSocket连接失败后3分钟内尝试重连3次
+``` ts
+// 在TypeScript中实现WebSocket连接失败后3分钟内尝试重连3次
 
 /**
  * @param {string} url  Url to connect
  * @param {number} maxReconnectAttempts Maximum number of times
- * @param {number} reconnect Timeout
- * @param {number} reconnectTimeout Timeout
+ * @param {number} reconnectInterval Timeout
+ * @param {number} maxReconnectTime Timeout
  *
  */
 class WebSocketReconnect {
+  private url: string;
+  private maxReconnectAttempts: number;
+  private reconnectInterval: number;
+  private maxReconnectTime: number;
+  private reconnectCount: number;
+  private reconnectTimeout: any;
+  private startTime: number | null;
+  public socket: WebSocket | null;
+
   constructor(
-    url,
-    maxReconnectAttempts = 3,
-    reconnectInterval = 20000,
-    maxReconnectTime = 180000
+    url: string,
+    maxReconnectAttempts: number = 3,
+    reconnectInterval: number = 20000,
+    maxReconnectTime: number = 180000
   ) {
     this.url = url;
     this.maxReconnectAttempts = maxReconnectAttempts;
@@ -30,7 +39,7 @@ class WebSocketReconnect {
   }
 
   // 连接操作
-  connect() {
+  private connect() {
     console.log("connecting...");
     this.socket = new WebSocket(this.url);
 
@@ -40,21 +49,23 @@ class WebSocketReconnect {
       this.clearReconnectTimeout();
       this.reconnectCount = 0;
     };
+
     // 连接关闭的回调方法
-    this.socket.onclose = (event) => {
+    this.socket.onclose = (event: CloseEvent) => {
       console.log("WebSocket Connection Closed:", event);
       this.handleClose();
     };
+
     // 连接发生错误的回调方法
-    this.socket.onerror = (error) => {
+    this.socket.onerror = (error: Event) => {
       console.error("WebSocket Connection Error:", error);
       // 重连
       this.handleClose();
     };
   }
 
-  //断线重连操作
-  handleClose() {
+  // 断线重连操作
+  private handleClose() {
     if (
       this.reconnectCount < this.maxReconnectAttempts &&
       (this.startTime === null ||
@@ -80,8 +91,8 @@ class WebSocketReconnect {
     }
   }
 
-  //清除重连定时器
-  clearReconnectTimeout() {
+  // 清除重连定时器
+  private clearReconnectTimeout() {
     if (this.reconnectTimeout) {
       clearTimeout(this.reconnectTimeout);
       this.reconnectTimeout = null;
@@ -89,7 +100,7 @@ class WebSocketReconnect {
   }
 
   // 关闭连接
-  close() {
+  public close() {
     if (this.socket && this.socket.readyState === WebSocket.OPEN) {
       this.socket.close();
     }
@@ -98,22 +109,6 @@ class WebSocketReconnect {
     this.startTime = null;
   }
 }
-
-// WebSocketReconnect 类封装了WebSocket的连接、重连逻辑。
-// maxReconnectAttempts 是最大重连尝试次数。
-// reconnectInterval 是每次重连尝试之间的间隔时间。
-// maxReconnectTime 是总的重连时间限制，超过这个时间后不再尝试重连。
-// reconnectCount 用于记录已经尝试的重连次数。
-// startTime 用于记录开始重连的时间。
-// connect 方法用于建立WebSocket连接，并设置相应的事件监听器。
-// handleClose 方法在WebSocket连接关闭或发生错误时被调用，根据条件决定是否尝试重连。
-// clearReconnectTimeout 方法用于清除之前设置的重连定时器。
-// close 方法用于关闭WebSocket连接，并清除重连相关的状态。
-
-// 使用示例
-// const webSocketReconnect = new WebSocketReconnect('ws://your-websocket-url')
-// 当不再需要WebSocket连接时，可以调用close方法
-// webSocketReconnect.close();
 
 export default WebSocketReconnect;
 ```

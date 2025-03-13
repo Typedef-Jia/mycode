@@ -27,14 +27,14 @@ features:
     details: 帮助开发者更快地响应变化，节约时间
 
   - title:  vue3 mock使用示例
-    details: 优先考虑体验和易用性
+    details: 
     link: /code/forward/mock.md
     linkText: 立即查看
 
-  - title: 📄 内容精炼
-    details: 具有较高的价值、准确性
-    link: /code/Preface.md
-    linkText: Go to
+  - title:  WebSocket 使用示例
+    details: 
+    link: /code/forward/WebSocket.md
+    linkText: 立即查看
   - title: 📄 内容精炼
     details: 具有较高的价值、准确性
     link: /code/Preface.md
