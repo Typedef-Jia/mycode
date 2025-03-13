@@ -26,10 +26,10 @@ features:
   - title: 🚀 加速开发
     details: 帮助开发者更快地响应变化，节约时间
 
-  - title: 💻 使用简单
+  - title:  vue3 mock使用示例
     details: 优先考虑体验和易用性
-    link: /code/Preface.md
-    linkText: Go to
+    link: /code/forward/mock.md
+    linkText: 立即查看
 
   - title: 📄 内容精炼
     details: 具有较高的价值、准确性

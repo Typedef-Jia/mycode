@@ -81,6 +81,7 @@ export default defineConfig({
           { text: 'typeScrpit', link: '/code/forward/typeScrpit.md' },
           { text: 'vue2', link: "/code/forward/vue2.md" },
           { text: 'vue3', link: '/code/forward/vue3.md' },
+          { text: 'mock使用示例', link: '/code/forward/mock.md' },
 
         ]
 
