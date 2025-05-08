@@ -23,8 +23,10 @@ hero:
       link: /nav/index.md
 
 features:
-  - title: 🚀 加速开发
-    details: 帮助开发者更快地响应变化，节约时间
+  - title: minio使用示例
+    details: 
+    link: /code/back/minio.md
+    linkText: 立即查看
 
   - title:  vue3 mock使用示例
     details: 
